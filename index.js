@@ -1,8 +1,7 @@
-/************************************
+/*************************************
   Pongsathorn Veeratumma
-  5835512030
-  11-03-2019
-  [ https://fb.me/palmz.haxker ]
+  [ 5835512030 ] [ 11-03-2019 ]
+	[ https://fb.me/palmz.haxker ]
 ************************************/
 
 Array.prototype.isSubset = function(arr) {
@@ -96,13 +95,22 @@ const freq = makeFreq(COMBINATION, INPUT, MIN)
 const strong = makeStrong(PERMUTATION, freq, MIN)
 
 console.log('Freq')
-console.log(freq.map(x => `[${x.item.join()}] : ${x.val}%`).join('\n'))
+console.log(
+	freq
+		.sort((a, b) => a.item.length > b.item.length)
+		.map(x => `[${x.item.join()}] : ${x.val}%`)
+		.join('\n')
+)
 console.log('========================\nStrong')
-console.log(strong.map(x => `[${x.x.join()}] => [${x.y.join()}] : ${x.val}%`).join('\n'))
+console.log(
+	strong
+		.sort((a, b) => a.x.length > b.x.length)
+		.map(x => `[${x.x.join()}] => [${x.y.join()}] : ${x.val}%`)
+		.join('\n')
+)
 
-/************************************
+/*************************************
   Pongsathorn Veeratumma
-  5835512030
-  11-03-2019
-  [ https://fb.me/palmz.haxker ]
+  [ 5835512030 ] [ 11-03-2019 ]
+	[ https://fb.me/palmz.haxker ]
 ************************************/
